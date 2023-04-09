@@ -1,13 +1,38 @@
-.container {
-    max-width: 1200px;
-    /* outline: 4px solid chartreuse; */
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+:root {
+  --actient-color-: #4d5ae5;
+  --title-color: #2e2f42;
+  --main-color-text: #434455;
+  --white-color: #ffffff;
+  --hover-color: #404bbf;
+  --footer-color-logo: #f4f4fd;
+  --footer-color-text: #e7e9fc;
+  --background-color-section: #f4f4fd;
+  --portfolio-background-color: #e5e5e5;
+  --customer-icons-color: #8e8f99;
+  --footer-soc-icons: #31d0aa;
+  --modal-color: #FCFCFC;
+}
+
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1158px) {
+    .container {
+      max-width: 1200px;
+    }
   }
 
 /* header */
+@media screen and (max-width: 767px) {
+  .header-list,
+.contacts-list {
+  display: none;
+}
+}
+
 .header-container {
     display: flex;
   
@@ -21,18 +46,26 @@
     .header-list {
         display: flex;
       }
-    .contacts-list {
-        display: flex;
+    
+      .menu-open-btn {
+        display: none;
+      }
+      .header-list-item:not(:last-child) {
+        margin-right: 40px;
       }
   }
-  
-  .header-list-item:not(:last-child) {
-    margin-right: 40px;
+
+  @media screen and (min-width: 1158px) {
+    .contacts-list {
+      display: flex;
+    }
   }
+  
+  
   .header-list-item {
   }
 
-
+  
 
 /* logo */
 .header-logo {
@@ -49,6 +82,18 @@
   }
   .logo {
     margin-right: 76px;
+    
+  }
+  @media screen and (max-width: 767px) {
+    .logo {
+      margin-top: 24px;
+    margin-bottom: 22px;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
 /* Navigation */
@@ -125,6 +170,12 @@
     color: var(--hover-color);
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .contacts-link {
+      padding: 0;
+      margin-top: 12px;
+    }
+  }
   /* hero */ 
 @media screen and (min-width: 768px) {
     .hero {
@@ -174,7 +225,7 @@
     }
     
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1158px) {
     .hero-section {
         
         background-image: linear-gradient(
@@ -186,7 +237,7 @@
       }
   }
 
-  @media screen and (min-width: 1200px),
+  @media screen and (min-width: 1158px),
    (min-device-pixel-ratio: 2),
    (-webkit-min-device-pixel-ratio: 2),
    (-o-min-device-pixel-ratio: 2/1),
@@ -200,4 +251,224 @@
       url(../images/Dark-bg-des@2x.jpg);
     }
     
+  }
+
+  /* features */
+  @media screen and (min-width: 1158px) {
+    .features-title {
+      margin-bottom: 8px;
+    
+      color: var(--title-color);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+  }
+
+
+  @media screen and (max-width: 1157px) {
+    .features-icons-container {
+      display: none;
+    }
+    .features-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  color: var(--title-color);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+    }
+    .features-text {
+      font-weight: 500;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .features-title {
+      text-align: center;
+    }
+    .features-list-item:not(:last-child) {
+      margin-bottom: 72px;
+    } 
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .features-list {
+      flex-wrap: wrap;
+      row-gap: 72px;
+      column-gap: 2px;
+    }
+    .features-list-item {
+      max-width: 344px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .features-list {
+      display: flex;
+    }
+  }
+
+
+  @media screen and (min-width: 1158px) {
+    .features-list-item {
+      width: calc((100%-72px) / 4);
+    }
+  }
+
+  /* what are we doing */
+
+  @media screen and (max-width: 1157px) {
+    .what-are-section {
+      display: none;
+    }
+  }
+
+
+  /* Our Team */
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .our-team-list {
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+
+  }
+
+  @media screen and (min-width: 768px) {
+    .our-team-list {
+      display: flex;
+      
+      
+    }
+    .our-team-list-item:not(:last-child) {
+      
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .card-icons-list {
+      justify-content: center;
+    }
+  }
+
+  
+
+
+  @media screen and (min-width: 1158px) {
+    .our-team-list {
+      display: flex;
+    }
+    .our-team-list-item:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+  /* customers */
+  @media screen and (max-width: 1157px) {
+    .customers-icons-list {
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 72px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .customers-icons-item {
+      width: calc((100% - 24px) / 2);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .customers-icons-item {
+      width: calc((100% - 48px) / 3);
+    }
+    .customers-box {
+      max-width: 552px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media screen and (min-width: 1158px) {
+    .customers-icons-item {
+      width: calc((100% - 120px) / 6);
+    }
+    
+    .customers-icons-item:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  /* footer */
+
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-soc-container {
+     margin-left: 24px;
+    } 
+    .footer-form-container {
+      margin-top: 72px;
+    }
+    .footer-container {
+      padding-left: 108px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .footer-form-text {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 16px;
+     }
+
+     .footer-input {
+      width: 264px;
+     }
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-form-pg,
+    .footer-soc-title,
+    .footer-text-container {
+      
+      text-align: center;
+    }
+
+    .footer-text-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .footer-button {
+      margin-top: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-soc-container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 72px;
+      margin-bottom: 72px;
+    }
+    .footer-label {
+      display: flex;
+      justify-content: center;
+      
+    }
+    
+  }
+
+  @media screen and (min-width: 1158px) {
+    .footer-text-container {
+      max-width: 264px;
+      margin-right: 120px;
+    }
+    .footer-soc-container {
+      margin-right: 80px;
+    }
   }
