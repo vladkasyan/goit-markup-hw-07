@@ -82,6 +82,7 @@ ul {
   align-items: center;
   background-color: var(--white-color);
   border-color: transparent;
+  padding: 24px 0;
   cursor: pointer;
 }
 
@@ -484,6 +485,7 @@ cursor: pointer;
 
 .possibilities-list {
   display: flex;
+  
 }
 .possibilities-list-item:not(:last-child) {
   margin-right: 24px;
